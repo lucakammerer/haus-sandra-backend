@@ -43,6 +43,31 @@ export default defineType({
             },
           ],
         }),
+        defineField({
+          name: 'infoBar',
+          title: 'Infoleiste unter Hero',
+          type: 'object',
+          fields: [
+            defineField({
+              name: 'locationText',
+              title: 'Ort (Text)',
+              type: 'string',
+              initialValue: 'Renchen-Ulm, Schwarzwald',
+            }),
+            defineField({
+              name: 'phone',
+              title: 'Telefon',
+              type: 'string',
+              initialValue: '07843 993046',
+            }),
+            defineField({
+              name: 'email',
+              title: 'E-Mail',
+              type: 'string',
+              initialValue: 'post@haus-sandra-ulm.de',
+            }),
+          ],
+        }),
       ],
     }),
     defineField({
