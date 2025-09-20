@@ -76,33 +76,6 @@ export default defineType({
       type: 'object',
       fields: [
         defineField({
-          name: 'title',
-          title: 'Titel',
-          type: 'string',
-        }),
-        defineField({
-          name: 'content',
-          title: 'Inhalt',
-          type: 'array',
-          of: [
-            {
-              type: 'block',
-              styles: [
-                {title: 'Normal', value: 'normal'},
-                {title: 'H2', value: 'h2'},
-                {title: 'H3', value: 'h3'},
-                {title: 'Quote', value: 'blockquote'},
-              ],
-              marks: {
-                decorators: [
-                  {title: 'Strong', value: 'strong'},
-                  {title: 'Emphasis', value: 'em'},
-                ],
-              },
-            },
-          ],
-        }),
-        defineField({
           name: 'image',
           title: 'Bild',
           type: 'image',
