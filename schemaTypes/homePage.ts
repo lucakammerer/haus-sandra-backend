@@ -140,23 +140,7 @@ export default defineType({
             }),
           ],
         }),
-        defineField({
-          name: 'coordinates',
-          title: 'GPS-Koordinaten',
-          type: 'geopoint',
-          description: 'Koordinaten für Google Maps (Lat: 48.5998, Lng: 7.9411)',
-          initialValue: {
-            lat: 48.5998,
-            lng: 7.9411,
-          },
-        }),
-        defineField({
-          name: 'googleMapsEmbedUrl',
-          title: 'Google Maps Embed URL',
-          type: 'url',
-          description: 'URL für die eingebettete Google Maps Karte',
-          initialValue: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2690.5!2d7.9411!3d48.5998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4791075d8b7f83b9%3A0x0!2sWeingartenstra%C3%9Fe%2069%2C%2077871%20Renchen-Ulm%2C%20Deutschland!5e0!3m2!1sde!2sde!4v1734950000000!5m2!1sde!2sde',
-        }),
+        // Coordinates and embed URL removed — map is hardcoded on the site
         defineField({
           name: 'directionsText',
           title: 'Anfahrtsbeschreibung',
