@@ -21,22 +21,6 @@ export const seoFields = [
         description: 'Beschreibung für Suchmaschinen (150-160 Zeichen)',
         validation: Rule => Rule.max(160).warning('Beschreibung sollte nicht länger als 160 Zeichen sein'),
       }),
-      defineField({
-        name: 'keywords',
-        title: 'Schlüsselwörter',
-        type: 'array',
-        of: [{type: 'string'}],
-        description: 'Relevante Suchbegriffe für diese Seite',
-      }),
-      defineField({
-        name: 'ogImage',
-        title: 'Social Media Bild',
-        type: 'image',
-        description: 'Bild für Social Media Shares (1200x630px empfohlen)',
-        options: {
-          hotspot: true,
-        },
-      }),
     ],
   }),
 ]
