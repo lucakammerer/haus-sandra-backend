@@ -10,6 +10,7 @@ export default defineType({
       title: 'Seitentitel',
       type: 'string',
       validation: Rule => Rule.required(),
+      initialValue: 'Kontakt',
     }),
     defineField({
       name: 'introduction',
@@ -27,115 +28,6 @@ export default defineType({
       ],
     }),
     defineField({
-      name: 'contactMethods',
-      title: 'Kontaktmöglichkeiten',
-      type: 'object',
-      fields: [
-        defineField({
-          name: 'title',
-          title: 'Überschrift',
-          type: 'string',
-        }),
-        defineField({
-          name: 'description',
-          title: 'Beschreibung',
-          type: 'text',
-          rows: 2,
-        }),
-        defineField({
-          name: 'preferredMethod',
-          title: 'Bevorzugte Kontaktmethode',
-          type: 'string',
-          options: {
-            list: [
-              {title: 'Telefon', value: 'phone'},
-              {title: 'E-Mail', value: 'email'},
-              {title: 'Kontaktformular', value: 'form'},
-            ],
-          },
-        }),
-      ],
-    }),
-    defineField({
-      name: 'businessHours',
-      title: 'Geschäftszeiten',
-      type: 'object',
-      fields: [
-        defineField({
-          name: 'title',
-          title: 'Überschrift',
-          type: 'string',
-        }),
-        defineField({
-          name: 'weekdays',
-          title: 'Montag - Freitag',
-          type: 'string',
-        }),
-        defineField({
-          name: 'saturday',
-          title: 'Samstag',
-          type: 'string',
-        }),
-        defineField({
-          name: 'sunday',
-          title: 'Sonntag',
-          type: 'string',
-        }),
-        defineField({
-          name: 'notes',
-          title: 'Anmerkungen',
-          type: 'text',
-          rows: 2,
-        }),
-      ],
-    }),
-    defineField({
-      name: 'directions',
-      title: 'Anfahrtsbeschreibung',
-      type: 'object',
-      fields: [
-        defineField({
-          name: 'title',
-          title: 'Überschrift',
-          type: 'string',
-        }),
-        defineField({
-          name: 'byCarDescription',
-          title: 'Anfahrt mit dem Auto',
-          type: 'array',
-          of: [
-            {
-              type: 'block',
-              styles: [
-                {title: 'Normal', value: 'normal'},
-                {title: 'H4', value: 'h4'},
-              ],
-            },
-          ],
-        }),
-        defineField({
-          name: 'publicTransportDescription',
-          title: 'Öffentliche Verkehrsmittel',
-          type: 'array',
-          of: [
-            {
-              type: 'block',
-              styles: [
-                {title: 'Normal', value: 'normal'},
-                {title: 'H4', value: 'h4'},
-              ],
-            },
-          ],
-        }),
-        defineField({
-          name: 'parkingInfo',
-          title: 'Parkinformationen',
-          type: 'text',
-          rows: 3,
-        }),
-      ],
-    }),
-    defineField({
       name: 'seo',
       title: 'SEO',
       type: 'object',
@@ -144,12 +36,14 @@ export default defineType({
           name: 'metaTitle',
           title: 'Meta-Titel',
           type: 'string',
+          initialValue: 'Kontakt – Haus Sandra',
         }),
         defineField({
           name: 'metaDescription',
           title: 'Meta-Beschreibung',
           type: 'text',
           rows: 3,
+          initialValue: 'Kontaktieren Sie das Haus Sandra für Buchungsanfragen, Anreiseinformationen und persönliche Beratung. Wir freuen uns auf Ihre Nachricht.',
         }),
       ],
     }),
