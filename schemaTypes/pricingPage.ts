@@ -37,12 +37,6 @@ export default defineType({
           type: 'string',
         }),
         defineField({
-          name: 'description',
-          title: 'Beschreibung',
-          type: 'text',
-          rows: 2,
-        }),
-        defineField({
           name: 'showRoomPrices',
           title: 'Zimmerpreise aus Gästezimmer-Dokumenten anzeigen',
           type: 'boolean',
@@ -61,59 +55,11 @@ export default defineType({
           type: 'string',
         }),
         defineField({
-          name: 'description',
-          title: 'Beschreibung',
-          type: 'text',
-          rows: 2,
-        }),
-        defineField({
           name: 'showApartmentPrices',
           title: 'Wohnungspreise aus Ferienwohnungs-Dokumenten anzeigen',
           type: 'boolean',
           initialValue: true,
         }),
-      ],
-    }),
-    defineField({
-      name: 'additionalCharges',
-      title: 'Zusätzliche Gebühren',
-      type: 'array',
-      of: [
-        {
-          type: 'object',
-          fields: [
-            defineField({
-              name: 'name',
-              title: 'Name',
-              type: 'string',
-            }),
-            defineField({
-              name: 'price',
-              title: 'Preis',
-              type: 'string',
-            }),
-            defineField({
-              name: 'description',
-              title: 'Beschreibung',
-              type: 'text',
-              rows: 2,
-            }),
-          ],
-        },
-      ],
-    }),
-    defineField({
-      name: 'bookingTerms',
-      title: 'Buchungsbedingungen',
-      type: 'array',
-      of: [
-        {
-          type: 'block',
-          styles: [
-            {title: 'Normal', value: 'normal'},
-            {title: 'H3', value: 'h3'},
-          ],
-        },
       ],
     }),
     defineField({
